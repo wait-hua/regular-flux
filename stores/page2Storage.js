@@ -31,15 +31,16 @@ var Store2 = Regular.extend({
     deleteItem: function(id) {
         this.data.splice(id, 1);
         // 数据操作完之后，通知更新view, 回掉函数的方法
-        this.emitDelete();
+        // this.emitDelete();
+        this.emitDone();
     },
-    emitDelete: function(){
-        this.$emit('delete');
-    },
-    addListenerDelete: function(callback){
-        // debugger
-        this.$on('delete', callback);
-    }
+    // emitDelete: function(){
+    //     this.$emit('delete');
+    // },
+    // addListenerDelete: function(callback){
+    //     // debugger
+    //     this.$on('delete', callback);
+    // }
 });
 
 instance = new Store2();

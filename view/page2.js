@@ -16,7 +16,7 @@ var Page2 = Regular.extend({
         Page2Store.addListener(this._getData.bind(this));
 
         // 传递给store数据删除时的回调函数
-        Page2Store.addListenerDelete(this._getData.bind(this));
+        // Page2Store.addListenerDelete(this._getData.bind(this));
     },
     _getData: function(){
         this.data.arr = Page2Store.getAll();
